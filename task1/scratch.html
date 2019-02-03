@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<input type="button" id="btn" value="открыть" onClick="openImage()"/>
+<input type="button" id="btn" value="open" onClick="openImage()"/>
 <div class="block"></div>
 <img alt="Myimg" class="image" src="image.jpg"/>
 <script>
@@ -19,11 +19,12 @@
         if (isBlue === true) {
             image.src = 'https://pp.userapi.com/Ye2pNCgg6dQufLdNjBHF-Q5Mwtz-AmyWOALaQg/rrvfM3wFZNI.jpg?ava=1';
             isBlue = false;
+            var newName = document.getElementById("btn");
+            newName.value = "Close";
         } else {
             image.src = '';
             isBlue = true;
-            var newName = document.getElementById("btn");
-            newName = button.value("Close");
+            newName.value = "Open";
 
         }
     }
