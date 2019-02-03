@@ -7,23 +7,20 @@
 </head>
 <body>
 <input type="button" id="btn" value="open" onClick="openImage()"/>
-<div class="block" id="redBlock"></div>
-<div class="block" id="blueBlock"></div>
+<div class="block" id="blue"></div>
 <img alt="Myimg" class="image" src="image.jpg"/>
 <script>
     //TODO:  заменить картинку на блок
+    var colorOfBlock = document.getElementById("blue");
     var isBlue = true;
     var toggleButton = document.getElementById("btn");
     function openImage() {
-        var allImagesInPage = document.getElementsByClassName('image');
-        block = document.getElementsByClassName("block");
-        var image = allImagesInPage[0];
         if (isBlue === true) {
-            image.src = 'https://pp.userapi.com/Ye2pNCgg6dQufLdNjBHF-Q5Mwtz-AmyWOALaQg/rrvfM3wFZNI.jpg?ava=1';
+            colorOfBlock.style.background = "blue";
             isBlue = false;
             toggleButton.value = "Close";
         } else {
-            image.src = '';
+            colorOfBlock.style.background = "white";
             isBlue = true;
             toggleButton.value = "Open";
         }
