@@ -11,6 +11,7 @@
 <img alt="Myimg" class="image" src="image.jpg"/>
 <script>
     var isBlue = true;
+    //TODO: не оставляй закоменченый код
     // var b = prompt('Сколько вам лет?', 10);
     //var k = confirm("Вы - админ?");
     function openImage() {
@@ -19,6 +20,8 @@
         if (isBlue === true) {
             image.src = 'https://pp.userapi.com/Ye2pNCgg6dQufLdNjBHF-Q5Mwtz-AmyWOALaQg/rrvfM3wFZNI.jpg?ava=1';
             isBlue = false;
+            //TODO: имя переменной "newName" не очем не говорит
+            //TODO: проблемы с "Замыкания, область видимости" почитай https://learn.javascript.ru/functions-closures
             newName = document.getElementById("btn");
             newName.value = "Close";
         } else {
