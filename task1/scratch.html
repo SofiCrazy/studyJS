@@ -7,28 +7,25 @@
 </head>
 <body>
 <input type="button" id="btn" value="open" onClick="openImage()"/>
-<div class="block"></div>
+<div class="block" id="redBlock"></div>
+<div class="block" id="blueBlock"></div>
 <img alt="Myimg" class="image" src="image.jpg"/>
 <script>
+    //TODO:  заменить картинку на блок
     var isBlue = true;
-    //TODO: не оставляй закоменченый код
-    // var b = prompt('Сколько вам лет?', 10);
-    //var k = confirm("Вы - админ?");
+    var toggleButton = document.getElementById("btn");
     function openImage() {
         var allImagesInPage = document.getElementsByClassName('image');
+        block = document.getElementsByClassName("block");
         var image = allImagesInPage[0];
         if (isBlue === true) {
             image.src = 'https://pp.userapi.com/Ye2pNCgg6dQufLdNjBHF-Q5Mwtz-AmyWOALaQg/rrvfM3wFZNI.jpg?ava=1';
             isBlue = false;
-            //TODO: имя переменной "newName" не очем не говорит
-            //TODO: проблемы с "Замыкания, область видимости" почитай https://learn.javascript.ru/functions-closures
-            newName = document.getElementById("btn");
-            newName.value = "Close";
+            toggleButton.value = "Close";
         } else {
             image.src = '';
             isBlue = true;
-            newName.value = "Open";
-
+            toggleButton.value = "Open";
         }
     }
 </script>
