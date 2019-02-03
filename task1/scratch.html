@@ -8,6 +8,7 @@
 <body>
 <input type="button" id="btn" value="open" onClick="openImage()"/>
 <div class="block" id="blue"></div>
+K
 <img alt="Myimg" class="image" src="image.jpg"/>
 <script>
     //TODO:  заменить картинку на блок
@@ -20,7 +21,7 @@
             isBlue = false;
             toggleButton.value = "Close";
         } else {
-            colorOfBlock.style.background = "white";
+            colorOfBlock.style.background = "";
             isBlue = true;
             toggleButton.value = "Open";
         }
