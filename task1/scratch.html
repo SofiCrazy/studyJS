@@ -2,26 +2,35 @@
 <html lang>
 <head>
     <meta charset="utf-8">
-    <title> mySq</title>
+    <title>Test page</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<input type="button" id="btn" value="open" onClick="openImage()"/>
-<div class="block" id="block"></div>
-K
-<img alt="Myimg" class="image" src="image.jpg"/>
+<h1 align="center">It's my first project</h1>
+<form action="form1">
+    <p>Каким браузером вы пользуетесь?</p>
+    <input type="radio" name="browser" value="google chrome">google chrome <Br>
+    <input type="radio" name="browser" value="opera">opera <Br>
+    <input type="radio" name="browser" value="yandex">яндекс <Br>
+    <input type="button" id="send" value="send"/>
+    <p><b><i>If you want to create a new object swich on the button "open".</i></b></p>
+    <div class="block" id="block1"></div>
+    <input type="button" id="btn" value="open" onClick="openBlock()"/>
+
+</form>
 <script>
-    var colorOfBlock = document.getElementById("block");
-    var isBlue = true;
+    var Block = document.getElementById("block1");
+    var isBlue = false;
     var toggleButton = document.getElementById("btn");
-    function openImage() {
-        if (isBlue === true) {
-            colorOfBlock.style.background = "blue";
-            isBlue = false;
+
+    function openBlock() {
+        if (isBlue === false) {
+            Block.style.background = "blue";
+            isBlue = true;
             toggleButton.value = "Close";
         } else {
-            colorOfBlock.style.background = "";
-            isBlue = true;
+            Block.style.background = "";
+            isBlue = false;
             toggleButton.value = "Open";
         }
     }
