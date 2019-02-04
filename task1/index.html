@@ -2,7 +2,7 @@
 <html lang> <meta charset="utf-8">
 <title>Test page</title>
 <head>
-
+    <link rel="main" href="./index.js">
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
@@ -18,22 +18,9 @@
     <input type="button" id="btn" value="open" onClick="openBlock()"/>
     <div class="block" id="background"></div>
 </form>
+<script scr="index.js"></script>
 <script>
     var Block = document.getElementById("block");
-    var isBlue = false;
-    var toggleButton = document.getElementById("btn");
-
-    function openBlock() {
-        if (isBlue === false) {
-            Block.style.background = "blue";
-            isBlue = true;
-            toggleButton.value = "Close";
-        } else {
-            Block.style.background = "";
-            isBlue = false;
-            toggleButton.value = "Open";
-        }
-    }
 </script>
 </body>
 </html>
