@@ -6,16 +6,17 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<h1 align="center">It's my first project</h1>
+<h1>It's my first project</h1>
 <form action="form">
     <p>Каким браузером вы пользуетесь?</p>
-    <input type="radio" name="browser" value="google chrome">google chrome <Br>
-    <input type="radio" name="browser" value="opera">opera <Br>
-    <input type="radio" name="browser" value="yandex">яндекс <Br>
+    <input type="radio" name="browser" value="google chrome">google chrome<Br>
+    <input type="radio" name="browser" value="opera">opera<Br>
+    <input type="radio" name="browser" value="yandex">яндекс<Br>
     <input type="button" id="send" value="send"/>
     <p><b><i> Нажмите на кнопку для того чтобы открыть картинку.</i></b></p>
     <div class="block" id="block"></div>
     <input type="button" id="btn" value="open" onClick="openBlock()"/>
+    <div class="block" id="background"></div>
 </form>
 <script>
     var Block = document.getElementById("block");
