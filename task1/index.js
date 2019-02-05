@@ -1,6 +1,6 @@
-var isBlue = false;
-$(document).ready(openBlock(){
-    $("#btn").onClick="openBlock()")}
+ var Block = document.getElementById("block");
+ var isBlue = false;
+ var toggleButton = document.getElementById("btn");
 function openBlock() {
     if (isBlue === false) {
         Block.style.background = "blue";
