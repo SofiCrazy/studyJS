@@ -1,11 +1,11 @@
-var warrior1 = {
+let warrior1 = {
     name: 'Zigs',
     class: 'wizard',
     life: 10,
     damage: 5,
 };
 
-var warrior2 = {
+let warrior2 = {
     name: 'Jinx',
     class: 'adk',
     damage: 2,
@@ -18,8 +18,10 @@ function figth(warrior) {
     }
 }
 
-warrior1.attack = figth(warrior2);
-warrior2.attack = figth(warrior1);
+warrior1 = figth(warrior2);
+console.log(this.life, this.name);
 
-console.log(warrior1.life, warrior1.name);
-console.log(warrior2.life, warrior2.name);
+warrior2 = figth(warrior1);
+console.log(this.life, this.name);
+
+
