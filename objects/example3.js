@@ -13,15 +13,13 @@ let warrior2 = {
 };
 
 function figth(warrior) {
-    if (this.life !== undefined) {
+    if (warrior.damage !== undefined) {
         this.life = this.life - warrior.damage;
     }
 }
 
-warrior1 = figth(warrior2);
-console.log(this.life, this.name);
-
-warrior2 = figth(warrior1);
-console.log(this.life, this.name);
+warrior1.attack = figth();
+warrior1.attack(warrior2);
+console.log(warrior1.life, warrior1.name);
 
 
