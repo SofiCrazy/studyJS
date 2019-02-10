@@ -18,8 +18,8 @@ function figth(warrior) {
     }
 }
 
-warrior1 = fight(warrior2);
-warrior2 = fight(warrior1);
+warrior1.attack = figth(warrior2);
+warrior2.attack = figth(warrior1);
 
 console.log(warrior1.life, warrior1.name);
 console.log(warrior2.life, warrior2.name);
