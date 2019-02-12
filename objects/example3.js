@@ -1,11 +1,11 @@
-let warrior1 = {
-    name: 'Zigs',
+let zigs = {
+    name: 'zigs',
     class: 'wizard',
     life: 10,
     damage: 2,
 };
 
-let warrior2 = {
+let jinx = {
     name: 'Jinx',
     class: 'adk',
     damage: 2,
@@ -13,9 +13,19 @@ let warrior2 = {
 };
 
 
-console.log(warrior1.life, warrior1.name);
-console.log(warrior2.life, warrior2.name);
+console.log(zigs.life, zigs.name);
+console.log(jinx.life, jinx.name);
 
+/**
+ * Данный метод возврщает boolean значение
+ * True - если персонаж жив
+ * False - если нет
+ */
+function isLife() {
+    //TODO: Софи напиши пожалуйста реализацию этого метода
+}
+
+//TODO: Соня) как думаешь где в этом методе можно использовать метод isLife?
 function figth(warrior) {
     while (this.life > 0) {
         this.life = this.life - warrior.damage;
@@ -32,11 +42,13 @@ function figth(warrior) {
     }
 
 };
-warrior1.attack = figth;
-warrior2.attack = figth;
 
-warrior1.attack(warrior2);
-console.log(warrior1.life, warrior1.name);
-console.log(warrior2.life, warrior2.name);
+//TODO: Софи добавь метод isLife для zigs и jinx
+zigs.attack = figth;
+jinx.attack = figth;
+
+zigs.attack(jinx);
+console.log(zigs.life, zigs.name);
+console.log(jinx.life, jinx.name);
 console.clear();
 
