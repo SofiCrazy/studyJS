@@ -12,6 +12,13 @@ let jinx = {
     life: 12,
 };
 
+let raptor = {
+    name: 'Raptor',
+    class: '??',
+    damage: 1,
+    life: 5,
+};
+
 
 console.log(zigs.life, zigs.name);
 console.log(jinx.life, jinx.name);
@@ -48,6 +55,8 @@ zigs.attack = figth;
 jinx.attack = figth;
 
 zigs.attack(jinx);
+console.log('\n==========\n');
+jinx.attack(raptor);
 console.log(zigs.life, zigs.name);
 console.log(jinx.life, jinx.name);
 console.clear();
