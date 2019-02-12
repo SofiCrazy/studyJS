@@ -20,8 +20,10 @@ function figth(warrior) {
     while (this.life > 0) {
         this.life = this.life - warrior.damage;
         warrior.life = warrior.life - this.damage;
+
         console.log(warrior.life, warrior.name);
         console.log(this.life, this.name);
+
         if (this.life > 0 && warrior.life <= 0) {
             console.log(this.name + " is winner ")
         } else {
