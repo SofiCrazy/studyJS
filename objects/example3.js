@@ -1,18 +1,18 @@
-let zigs = {
+const zigs = {
     name: 'zigs',
     class: 'wizard',
     life: 7,
     damage: 1,
 };
 
-let jinx = {
+const jinx = {
     name: 'Jinx',
     class: 'adk',
     damage: 1,
     life: 6,
 };
 
-let raptor = {
+const raptor = {
     name: 'Raptor',
     class: 'Tank',
     damage: 1,
@@ -34,7 +34,6 @@ function isLife() {
     }
 }
 
-//TODO: Соня) как думаешь где в этом методе можно использовать метод isLife?
 function fight(warrior) {
     console.log("The " + this.name + " fighting with " + warrior.name);
     while (this.isLife() && warrior.isLife()) {
@@ -56,7 +55,6 @@ function fight(warrior) {
 
 }
 
-//TODO: Софи добавь метод isLife для zigs и jinx
 zigs.attack = fight;
 jinx.attack = fight;
 zigs.isLife = isLife;
@@ -65,3 +63,5 @@ raptor.isLife = isLife;
 
 zigs.attack(jinx);
 console.log('\n==========\n');
+jinx.attack(raptor);
+raptor.attack = fight;
