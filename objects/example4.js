@@ -1,25 +1,22 @@
-const zigs = {
-    name: 'Zigs',
-    class: 'wizard',
-    life: 7,
-    damage: 1,
-    armor: 2,
-};
+const jinx = createHero("Jinx", 1, 7, 3);
+const zigs = createHero("Zigs", 1, 7, 2);
 
-const jinx = {
-    name: 'Jinx',
-    class: 'adk',
-    damage: 1,
-    life: 7,
-    armor: 3,
-};
+function createHero(name, damage, life, armor) {
+    const hero = {
+        name: name,
+        damage: damage,
+        life: life,
+        armor: armor,
+    };
+    hero.attack = fight;
+    hero.isLife = isLife;
+    return hero;
+
+}
 
 function isLife() {
-    if (this.life > 0) {
-        return true;
-    } else {
-        return false
-    }
+    return this.life > 0
+
 }
 
 function fight(warrior) {
@@ -47,10 +44,6 @@ function fight(warrior) {
 
 }
 
-zigs.attack = fight;
-jinx.attack = fight;
-zigs.isLife = isLife;
-jinx.isLife = isLife;
 
 zigs.attack(jinx);
 console.log('\n==========\n');
