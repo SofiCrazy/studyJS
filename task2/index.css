@@ -8,8 +8,55 @@ body {
     background-size: cover;
     height: 100%;
 }
-
 .navbar-brand {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.navList {
+    margin: 0;
+    padding: 0;
+}
+
+.navList a {
+    padding: .75em 1.5em;
+    transition: all .25s ease-in-out;
+}
+
+.navListItem {
+    border-style: solid;
+    border-width: 0 0 1px;
+}
+
+.navListItem,
+.navListItem a {
+    display: block;
+}
+
+@media screen and (min-width: 1024px) {
+    .navList > .navListItem {
+        border-width: 0 1px 0 0;
+    }
+
+    .navList > .navListItem,
+    .navList > .navListItem a {
+        display: inline-block;
+    }
+}
+
+.nav {
+    background-color: #555555;
+}
+
+.nav .navListItem {
+    border-color: #e5e5e5;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover, .nav a:active, .nav a:focus {
+    background-color: #e5e5e5;
 }
